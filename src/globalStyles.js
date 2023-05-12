@@ -27,14 +27,17 @@ export const MainHeading = styled.h1`
 	letter-spacing: 4px;
   color: #000000;
 	text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 
 	&:hover {
-		color: #c8c9d8;
+    color: #c8c9d8;
 		transition: all 0.8s ease;
 	}
 
-	@media screen and (max-width: 1440px) {
-		text-align: center;
+	@media screen and (max-width: 1640px) {
+    text-align: center;
 		width: 100%;
 		display: table;
 
