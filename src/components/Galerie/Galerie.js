@@ -3,7 +3,7 @@ import React,{useState} from 'react';
 import Carousel from '../Carousel/Carousel';
 import { useHistory } from 'react-router-dom';
 import { Container, MainHeading } from '../../globalStyles';
-import { GalerieVideo, GalerieSection, GalerieText } from './GalerieStyles';
+import { GalerieCard, GalerieVideo, GalerieSection, GalerieText, GalerieButton } from './GalerieStyles';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 const images = [
@@ -27,6 +27,12 @@ const images = [
 const Galerie = () => {
   const [data, setData] = useState({img: '', i: 0})
   const history = useHistory();
+
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleImageHover = (index) => {
+    setHoveredIndex(index);
+  };
   const viewImage = (img, i) => {
     setData({img, i})
   }
@@ -51,48 +57,49 @@ const Galerie = () => {
 				<GalerieText>
         L'art du modelage en papier mâché..
 				</GalerieText>
+        {data.img &&
+          <div style={{
+            width: '50%',
+            backgroundColor: 'white',
+            position: 'absolute',
+            display: 'flex',
+            justifyContent: 'center',
+            flexDirection: 'row',
+            boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
+          }}>
+
+          <GalerieButton>
+            <button onClick={()=> imgAction()} style={{position: 'absolute', top: '10px', right: '10px', border: 'round-5'}}> ❌ </button>
+            <button onClick={()=> imgAction('previous-img')}>Previous</button>
+            <img src={data.img} style={{width: '60%'}} alt="" />
+            <button onClick={()=> imgAction('next-img')}> Next </button>
+            </GalerieButton>
+          </div>
+        }
 			</Container>
     </GalerieSection>
-      {data.img &&
-        <div style={{
-          width: '100%',
-          height: '70vh',
-          backgroundColor: 'transparent',
-          position: 'fixed',
-          display: 'flex',
-          alignItems: 'center',
-          overflow: 'hidden',
-          marginBottom: '10px',
-          justifyContent: 'space-evenly',
-          flexDirection: 'row',
-          boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
-        }}>
-          <button onClick={()=> imgAction()} style={{position: 'absolute', top: '10px', right: '10px'}}> ❌ </button>
-          <button onClick={()=> imgAction('previous-img')}>Previous</button>
-          <img src={data.img} style={{width: '60%'}} alt="" />
-          <button onClick={()=> imgAction('next-img')}> Next </button>
-        </div>
-      }
+
       <div style={{padding: "100px"}}>
         <ResponsiveMasonry
           columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
           >
           <Masonry gutter="40px">
               {images.map((image, i) => (
+                <GalerieCard>
                 <img
                 key={i}
                 src={image}
                 style={{width: "100%", display: "block", boxShadow: '0px 0px 10px 0px rgba(0,0,2,2.75)',}}
                 alt=""
                 onClick={()=> viewImage(image, i)}
-
                 />
+              </GalerieCard>
                 ))}
           </Masonry>
         </ResponsiveMasonry>
+      <Carousel />
       </div>
     <div>
-    <Carousel />
     </div>
     </>
 	);

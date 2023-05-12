@@ -17,6 +17,7 @@ export const HeroVideo = styled.video`
 	top: 0;
 	position: absolute;
 	z-index: -1;
+  opacity: 0.8;
 `;
 
 export const HeroText = styled.p`

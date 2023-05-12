@@ -36,10 +36,48 @@ export const GalerieButton = styled(Button)`
 	}
 
 	&:hover:before {
-		height: 0%;
+		height: 10%;
 	}
 
 	&:hover {
 		color: white;
+	}
+`;
+
+export const GalerieCard = styled.div`
+	&:hover {
+		transform: scale(1.06);
+		transition: all 0.3s ease-out;
+	}
+`;
+
+export const GalerieCardInfo = styled.div`
+	background: #242424;
+	box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
+	width: 280px;
+	text-decoration: none;
+	border-radius: 4px;
+
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	color: #fff;
+	margin: auto;
+	> button {
+		margin-top: auto;
+
+		&:hover {
+			color: black;
+			background: white;
+			transition: background 0.3s ease;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		width: 90%;
+
+		&:hover {
+			transform: none;
+		}
 	}
 `;

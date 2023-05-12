@@ -8,6 +8,7 @@ import Galerie from './components/Galerie/Galerie';
 import Home from './pages/Home';
 import SignUp from './pages/SignupPage';
 import Pricing from './pages/PricingPage';
+import Apropos from './pages/Apropos';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/signup" component={SignUp} />
         <Route path="/pricing" component={Pricing} />
         <Route path="/galerie" component={Galerie} />
+        <Route path="/apropos" component={Apropos} />
       </Switch>
       <Footer />
     </BrowserRouter>
