@@ -21,7 +21,7 @@ export const HeroVideo = styled.video`
 
 export const HeroText = styled.p`
 	margin-bottom: 35px;
-	font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+	font-size: clamp(1.5rem, 1.5vw, 1.3rem);
 	line-height: 24px;
 	text-align: center;
 	letter-spacing: 2px;

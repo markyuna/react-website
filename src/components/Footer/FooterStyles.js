@@ -70,7 +70,7 @@ export const FooterColumn = styled(Column)`
 
 export const FooterSubText = styled.p`
 	margin-bottom: 24px;
-	font-size: 20px;
+	font-size: 25px;
 `;
 
 export const FooterLinksContainer = styled.div`
@@ -126,7 +126,7 @@ export const FooterLogo = styled(Link)`
 
 export const SocialIcon = styled.img`
 	margin-right: 1rem;
-	width: 20rem;
+	width: 10rem;
 `;
 
 export const FooterRights = styled.div`
@@ -142,7 +142,7 @@ export const FooterRights = styled.div`
 
 export const FooterSocialIcon = styled.a`
 	color: #fff;
-	font-size: 24px;
+	font-size: 30px;
 `;
 
 export const FooterAddress = styled.div`

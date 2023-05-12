@@ -28,7 +28,7 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavLogo = styled(Link)`
-	color: #fff;
+	color: #000000;
 	justify-self: flex-start;
 	cursor: pointer;
 	text-decoration: none;
@@ -101,16 +101,16 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled.span`
-	color: #fff;
+	color: #000000;
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 2rem;
 	height: 100%;
 
 	&:hover {
 		color: #c8c9d8;
-		transition: all 0.3s ease;
+		transition: all 0.8s ease;
 	}
 
 	@media screen and (max-width: 960px) {
