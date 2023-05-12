@@ -23,7 +23,7 @@ export const data = [
 	{
 		title: 'Our top clients',
 		description: 'We have provided services to top clients in tech industry',
-		image: './assets/hero.mp4',
+		image: './assets/lampe.png',
 	},
 ];
 

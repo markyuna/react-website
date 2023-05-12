@@ -3,7 +3,7 @@ import Galerie from '../components/Galerie/Galerie';
 
 // Hero Feature Content Carousel
 
-const Home = () => {
+const MyGalerie = () => {
 	return (
 		<>
       <Galerie />
@@ -11,4 +11,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default MyGalerie;

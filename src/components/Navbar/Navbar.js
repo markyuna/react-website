@@ -1,4 +1,5 @@
-/* eslint-disable react-hooks/rules-of-hooks */
+// components/Navbar/Navbar 
+
 import React, { useState } from 'react';
 import { CgMenuRight } from 'react-icons/cg';
 import { FaTimes } from 'react-icons/fa';
@@ -48,7 +49,7 @@ const Navbar = () => {
 				<NavbarContainer>
 					<NavLogo to="/">
 						<NavIcon src="./assets/logo.png" alt="logo" />
-						M
+
 					</NavLogo>
 					<MobileIcon onClick={handleClick}>
 						{show ? <FaTimes /> : <CgMenuRight />}

@@ -1,32 +1,29 @@
+/* eslint-disable react/jsx-no-undef */
 import React from 'react';
 import GlobalStyle from './globalStyles';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
-
-//Pages
-import Galerie from './pages/Galerie';
+import Galerie from './components/Galerie/Galerie';
 import Home from './pages/Home';
 import SignUp from './pages/SignupPage';
 import Pricing from './pages/PricingPage';
 import Footer from './components/Footer/Footer';
 
 function App() {
-	return (
-    <>
-		<Router>
-			<GlobalStyle />
-			<Navbar />
-			<Switch>
-				<Route path="/" exact component={Home} />
-				<Route path="/signup" exact component={SignUp} />
-				<Route path="/pricing" exact component={Pricing} />
-        <Route path="/galerie" exact component={Galerie} />
-			</Switch>
-			<Footer />
-		</Router>
-    </>
-	);
+  return (
+    <BrowserRouter>
+      <GlobalStyle />
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/pricing" component={Pricing} />
+        <Route path="/galerie" component={Galerie} />
+      </Switch>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
 export default App;

@@ -1,3 +1,4 @@
+// component name: Hero
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button, Container, MainHeading } from '../../globalStyles';

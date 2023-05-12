@@ -12,7 +12,7 @@ export const HeroSection = styled.section`
 export const HeroVideo = styled.video`
 	object-fit: cover;
 	width: 100%;
-	height: 100%;
+	height: 90%;
 	background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
 	top: 0;
 	position: absolute;
