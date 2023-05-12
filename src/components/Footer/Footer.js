@@ -23,7 +23,7 @@ function Footer() {
 					<FooterColumn id="footerLogo">
 						<FooterLogo to="/">
 							<SocialIcon src="./assets/logo.png" />
-							Delta
+							logo
 						</FooterLogo>
 						<FooterAddress>
 							69 Street, Delta Building, US Road, Los Angeles 123
@@ -33,7 +33,7 @@ function Footer() {
 							{footerSocialData.map((social, index) => (
 								<FooterSocialIcon
 									key={index}
-									href="/"
+									href={social.url}
 									target="_blank"
 									aria-label={social.name}
 								>

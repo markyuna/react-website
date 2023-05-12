@@ -121,11 +121,12 @@ export const FooterLogo = styled(Link)`
 	display: flex;
 	align-items: center;
 	margin-bottom: 16px;
+  width: 300px;
 `;
 
 export const SocialIcon = styled.img`
-	margin-right: 10px;
-	width: 40px;
+	margin-right: 1rem;
+	width: 20rem;
 `;
 
 export const FooterRights = styled.div`

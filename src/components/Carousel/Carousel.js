@@ -11,6 +11,7 @@ import {
 	CardButton,
 } from './CarouselStyles';
 
+
 const Carousel = () => {
 	const [sliderRef, setSliderRef] = useState(null);
 

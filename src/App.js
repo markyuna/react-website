@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 
 //Pages
+import Galerie from './pages/Galerie';
 import Home from './pages/Home';
 import SignUp from './pages/SignupPage';
 import Pricing from './pages/PricingPage';
@@ -20,6 +21,7 @@ function App() {
 				<Route path="/" exact component={Home} />
 				<Route path="/signup" exact component={SignUp} />
 				<Route path="/pricing" exact component={Pricing} />
+        <Route path="/galerie" exact component={Galerie} />
 			</Switch>
 			<Footer />
 		</Router>

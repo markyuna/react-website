@@ -1,21 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Button, Container, MainHeading } from '../../globalStyles';
 import { HeroVideo, HeroSection, HeroText, ButtonWrapper, HeroButton } from './HeroStyles';
 
 const Hero = () => {
+	const history = useHistory();
+
 	return (
 		<HeroSection>
 			<HeroVideo src="./assets/hero.mp4" autoPlay muted />
 			<Container>
-				<MainHeading>Your data is secure with us</MainHeading>
+				<MainHeading>Marcos Suarez Romero</MainHeading>
 				<HeroText>
-					We provide the best security systems for clients all over the world
+					Découvrez le charme du papier mâché dans mes créations artistiques.
 				</HeroText>
 				<ButtonWrapper>
-					<Link to="signup">
-						<Button>Get Started</Button>
-					</Link>
+					<Button onClick={() => history.push('/galerie')}>Voir les oeuvres</Button>
 					<HeroButton>Find More</HeroButton>
 				</ButtonWrapper>
 			</Container>

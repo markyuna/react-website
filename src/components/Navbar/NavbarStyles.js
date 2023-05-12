@@ -19,6 +19,7 @@ export const Nav = styled.nav`
 `;
 
 export const NavbarContainer = styled(Container)`
+  margin-top: 2rem;
 	display: flex;
 	justify-content: start;
 	height: 80px;
@@ -31,15 +32,16 @@ export const NavLogo = styled(Link)`
 	justify-self: flex-start;
 	cursor: pointer;
 	text-decoration: none;
-	font-size: 2rem;
+	font-size: 3rem;
 	display: flex;
 	align-items: center;
 	z-index: 50;
 `;
 
 export const NavIcon = styled.img`
-	margin-right: 1rem;
-	width: 3rem;
+  margin-top: 5rem;
+	margin-right: 3rem;
+	width: 10rem;
 `;
 
 export const MobileIcon = styled.div`
@@ -58,6 +60,7 @@ export const MobileIcon = styled.div`
 `;
 
 export const NavMenu = styled.ul`
+margin-top: 5rem;
 	display: flex;
 	align-items: center;
 	list-style: none;
