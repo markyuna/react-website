@@ -56,7 +56,7 @@ const Galerie = () => {
       {data.img &&
         <div style={{
           width: '100%',
-          height: '100vh',
+          height: '70vh',
           backgroundColor: 'transparent',
           position: 'fixed',
           display: 'flex',
@@ -65,25 +65,27 @@ const Galerie = () => {
           marginBottom: '10px',
           justifyContent: 'space-evenly',
           flexDirection: 'row',
+          boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
         }}>
           <button onClick={()=> imgAction()} style={{position: 'absolute', top: '10px', right: '10px'}}> ❌ </button>
           <button onClick={()=> imgAction('previous-img')}>Previous</button>
-          <img src={data.img} style={{width: '70%'}} alt="" />
+          <img src={data.img} style={{width: '60%'}} alt="" />
           <button onClick={()=> imgAction('next-img')}> Next </button>
         </div>
       }
-      <div style={{padding: "10px"}}>
+      <div style={{padding: "100px"}}>
         <ResponsiveMasonry
           columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
           >
-          <Masonry gutter="20px">
+          <Masonry gutter="40px">
               {images.map((image, i) => (
                 <img
                 key={i}
                 src={image}
-                style={{width: "100%", display: "block"}}
+                style={{width: "100%", display: "block", boxShadow: '0px 0px 10px 0px rgba(0,0,2,2.75)',}}
                 alt=""
                 onClick={()=> viewImage(image, i)}
+
                 />
                 ))}
           </Masonry>

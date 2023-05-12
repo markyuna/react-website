@@ -4,7 +4,7 @@ import { Button } from '../../globalStyles';
 export const GalerieSection = styled.section`
 	background-position: center;
 	background-size: cover;
-	padding-top: clamp(50px, 25vh, 220px);
+	padding-top: clamp(20px, 25vh, 220px);
 	box-shadow: inset 0 0 0 1000px rgba (0, 0, 0, 0.2);
 `;
 
@@ -32,7 +32,7 @@ export const GalerieButton = styled(Button)`
 
 	&:before {
 		background: #fff;
-		height: 500%;
+		height: 300%;
 	}
 
 	&:hover:before {

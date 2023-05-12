@@ -33,7 +33,7 @@ export const MainHeading = styled.h1`
 		transition: all 0.8s ease;
 	}
 
-	@media screen and (max-width: 960px) {
+	@media screen and (max-width: 1440px) {
 		text-align: center;
 		width: 100%;
 		display: table;
