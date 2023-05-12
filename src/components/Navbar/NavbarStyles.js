@@ -22,7 +22,7 @@ export const NavbarContainer = styled(Container)`
   margin-top: 2rem;
 	display: flex;
 	justify-content: start;
-	height: 80px;
+	height: 100px;
 
 	${Container}
 `;

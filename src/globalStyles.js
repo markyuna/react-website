@@ -14,7 +14,6 @@ export const Container = styled.div`
 	max-width: 1300px;
 	margin-right: auto;
 	margin-left: auto;
-	padding: 0 50px;
 
 	@media screen and (max-width: 960px) {
 		padding: 0 30px;
@@ -26,7 +25,24 @@ export const MainHeading = styled.h1`
 	color: ${({ inverse }) => (inverse ? '$403ae3' : '#1a1308')};
 	width: 100%;
 	letter-spacing: 4px;
-	text-align: center;
+  color: #000000;
+	text-decoration: none;
+
+	&:hover {
+		color: #c8c9d8;
+		transition: all 0.8s ease;
+	}
+
+	@media screen and (max-width: 960px) {
+		text-align: center;
+		width: 100%;
+		display: table;
+
+		&:hover {
+			color: #4b59f7;
+			transition: all 0.3s ease;
+		}
+	}
 `;
 
 export const Heading = styled.h2`

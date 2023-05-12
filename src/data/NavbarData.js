@@ -1,7 +1,12 @@
 export const data = [
+  {
+		to: '/',
+		text: 'Acueil',
+		id: 'acueil',
+	},
 	{
 		to: '/',
-		text: 'About',
+		text: 'A propos',
 		id: 'about',
 	},
 	{
