@@ -18,10 +18,10 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/signup" component={SignUp} />
+        <Route path="/apropos" component={Apropos} />
         <Route path="/pricing" component={Pricing} />
         <Route path="/galerie" component={Galerie} />
-        <Route path="/apropos" component={Apropos} />
+        <Route path="/signup" component={SignUp} />
       </Switch>
       <Footer />
     </BrowserRouter>

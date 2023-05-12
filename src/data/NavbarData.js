@@ -1,8 +1,7 @@
 export const data = [
   {
 		to: '/',
-		text: 'Acueil',
-		id: 'acueil',
+		text: 'Home',
 	},
 	{
 		to: '/apropos',

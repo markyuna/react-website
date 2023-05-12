@@ -14,6 +14,5 @@ export const AproposText = styled.p`
 	line-height: 24px;
 	text-align: center;
 	letter-spacing: 2px;
-	color: #fff;
+	color: black;
 `;
-

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Container, MainHeading } from '../../globalStyles';
-import { AproposSection, AproposText, PricingCard } from './AproposStyles';
+import { AproposSection, AproposText,  } from './AproposStyles';
 
 
 const Apropos = () => {

@@ -23,7 +23,6 @@ export const NavbarContainer = styled(Container)`
 	display: flex;
 	justify-content: start;
 	height: 100px;
-
 	${Container}
 `;
 
