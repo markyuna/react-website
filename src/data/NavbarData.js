@@ -1,3 +1,4 @@
+
 export const data = [
   {
 		to: '/',
@@ -6,7 +7,6 @@ export const data = [
 	{
 		to: '/apropos',
 		text: 'A propos',
-		id: 'apropos',
 	},
 	{
 		to: '/pricing',

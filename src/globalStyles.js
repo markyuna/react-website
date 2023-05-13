@@ -42,9 +42,13 @@ export const MainHeading = styled.h1`
 		display: table;
 
 		&:hover {
-			color: #4b59f7;
+      color: #c8c9d8;
 			transition: all 0.3s ease;
 		}
+    &:after:hover {
+      color: black;
+      transition: all 0.8s ease;
+    }
 	}
 `;
 

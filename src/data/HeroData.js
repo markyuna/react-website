@@ -2,11 +2,11 @@ export const heroOne = {
 	reverse: true,
 	inverse: true,
 	topLine: {
-		text: 'Founded in 2012',
+		text: 'Fondé en 2021',
 	},
-	headline: "We've been in business for 9 years",
-	description: 'We have designed and implemented the best cloud security solutions',
-	buttonLabel: 'Find More',
+	headline: "Nous sommes en affaires depuis 3 ans",
+	description: "Au cours des dernières années, j'ai créé une variété de sculptures d'au moins 5 à 10 commandes",
+	buttonLabel: 'Voir les projets',
 	imgStart: 'start',
 	img: './assets/svg/Deal.svg',
 	start: 'true',
@@ -18,9 +18,9 @@ export const heroTwo = {
 	topLine: {
 		text: 'Designed & Developed',
 	},
-	headline: 'The best practices',
-	description: 'Our clients have had the best experience working with us',
-	buttonLabel: 'View Project',
+	headline: 'Les bonnes pratiques',
+	description: 'Nos clients satisfaits après réception de leur commande',
+	buttonLabel: 'Voir les avis',
 
 	linkTo: '/more',
 	imgStart: 'start',
@@ -34,7 +34,7 @@ export const heroThree = {
 	topLine: {
 		text: 'Highly reputed brand',
 	},
-	headline: 'Why us? ',
+	headline: 'Pourquoi nous? ',
 	description:
 		'Our 9 year experience have allowed us to use the most innovative technologies and methodologies',
 	buttonLabel: 'View Project',

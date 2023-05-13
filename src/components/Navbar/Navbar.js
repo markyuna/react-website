@@ -1,4 +1,4 @@
-// components/Navbar/Navbar 
+// components/Navbar/Navbar
 
 import React, { useState } from 'react';
 import { CgMenuRight } from 'react-icons/cg';
@@ -49,7 +49,6 @@ const Navbar = () => {
 				<NavbarContainer>
 					<NavLogo to="/">
 						<NavIcon src="./assets/logo.png" alt="logo" />
-
 					</NavLogo>
 					<MobileIcon onClick={handleClick}>
 						{show ? <FaTimes /> : <CgMenuRight />}

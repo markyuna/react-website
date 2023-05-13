@@ -15,6 +15,13 @@ import {
 import { footerData, footerSocialData } from '../../data/FooterData';
 import { Row, Section } from '../../globalStyles';
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
 function Footer() {
 	return (
 		<Section padding="4rem 0 2rem 0">
@@ -42,16 +49,18 @@ function Footer() {
 							))}
 						</Row>
 					</FooterColumn>
-					{footerData.map((footerItem, index) => (
-						<FooterLinkItems key={index}>
-							<FooterLinkTitle>{footerItem.title}</FooterLinkTitle>
-							{footerItem.links.map((link, linkIndex) => (
-								<FooterLink key={linkIndex} to="/">
-									{link}
-								</FooterLink>
-							))}
-						</FooterLinkItems>
-					))}
+
+          {footerData.map((footerItem, index) => (
+            <FooterLinkItems key={index}>
+              <FooterLinkTitle>{footerItem.title}</FooterLinkTitle>
+                {footerItem.links.map((link, linkIndex) => (
+                  <FooterLink key={linkIndex} to={link.to} onClick={scrollToTop}>
+                   {link.name}
+                  </FooterLink>
+                ))}
+
+            </FooterLinkItems>
+          ))}
 				</FooterGrid>
 				<FooterRights>MarkPaper © 2023</FooterRights>
 			</FooterWrapper>

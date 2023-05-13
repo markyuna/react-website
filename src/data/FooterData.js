@@ -3,39 +3,35 @@ import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const iconStyle = (Icon) => <Icon />;
 
-export const footerSocialData = [
-	{
-		name: 'Facebook',
-		icon: iconStyle(FaFacebook),
-    url: 'https://fr-fr.facebook.com/',
-	},
-	{
-		name: 'Instagram',
-		icon: iconStyle(FaInstagram),
-    url: 'https://www.instagram.com/markpapermache/',
-	},
-	{
-		name: 'LinkedIn',
-		icon: iconStyle(FaLinkedin),
-    url: 'https://www.linkedin.com/in/marcos-suarez22/',
-	},
-];
+export const footerSocialData = [  {    name: 'Facebook',    icon: iconStyle(FaFacebook),    url: 'https://fr-fr.facebook.com/',  },  {    name: 'Instagram',    icon: iconStyle(FaInstagram),    url: 'https://www.instagram.com/markpapermache/',  },  {    name: 'LinkedIn',    icon: iconStyle(FaLinkedin),    url: 'https://www.linkedin.com/in/marcos-suarez22/',  },];
 
-export const footerData = [
-	{
-		title: 'Main',
-		links: ['Blog', 'FAQs', 'Support', 'About us'],
-	},
-	{
-		title: 'Product',
-		links: ['Login', 'Personal', 'Business', 'Team'],
-	},
-	{
-		title: 'Press',
-		links: ['Logos', 'Events', 'Stories', 'Office'],
-	},
-	{
-		title: 'Legal',
-		links: ['GDPR', 'Privacy Policy', 'Terms of Service', 'Disclaimer'],
-	},
+export const footerData = [  {    title: 'Main',    links: [      { name: 'Blog', to: '/' },      { name: 'FAQs', to: '/' },      { name: 'Support', to: '/' },      { name: 'About us', to: '/' }    ]
+  },
+  {
+    title: 'Product',
+    links: [
+      { name: 'Login', to: '/signup' },
+      { name: 'Personal', to: '/' },
+      { name: 'Galerie', to: '/galerie' },
+      { name: 'Team', to: '/' }
+    ]
+  },
+  {
+    title: 'Press',
+    links: [
+      { name: 'Logos', to: '/' },
+      { name: 'Events', to: '/' },
+      { name: 'Stories', to: '/' },
+      { name: 'Office', to: '/' }
+    ]
+  },
+  {
+    title: 'Legal',
+    links: [
+      { name: 'GDPR', to: '/' },
+      { name: 'Privacy Policy', to: '/' },
+      { name: 'Terms of Service', to: '/' },
+      { name: 'Disclaimer', to: '/' }
+    ]
+  }
 ];
