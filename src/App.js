@@ -1,17 +1,20 @@
-/* eslint-disable react/jsx-no-undef */
 import React from 'react';
 import GlobalStyle from './globalStyles';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
+
+import Profile from './components/Profile/Profile';
+
 import Galerie from './components/Galerie/Galerie';
 import Home from './pages/Home';
-import SignUp from './pages/SignupPage';
 import Pricing from './pages/PricingPage';
 import Apropos from './pages/Apropos';
 import Footer from './components/Footer/Footer';
 
 function App() {
+
+
   return (
     <BrowserRouter>
       <GlobalStyle />
@@ -21,7 +24,7 @@ function App() {
         <Route path="/apropos" component={Apropos} />
         <Route path="/pricing" component={Pricing} />
         <Route path="/galerie" component={Galerie} />
-        <Route path="/signup" component={SignUp} />
+        <Route path="/profile" component={Profile} />
       </Switch>
       <Footer />
     </BrowserRouter>

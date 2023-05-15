@@ -135,4 +135,22 @@ export const NavBtnLink = styled(Link)`
 	width: 100%;
 	border: none;
 	outline: none;
+	color: #000000;
+
+	&:hover {
+		color: #c8c9d8;
+		transition: all 0.8s ease;
+	}
+
+	@media screen and (max-width: 960px) {
+		text-align: center;
+		padding: 1rem;
+		width: 100%;
+		display: table;
+
+		&:hover {
+			color: #4b59f7;
+			transition: all 0.3s ease;
+		}
+	}
 `;
