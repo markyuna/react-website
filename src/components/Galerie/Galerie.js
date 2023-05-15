@@ -2,8 +2,11 @@
 import React,{useState} from 'react';
 import Carousel from '../Carousel/Carousel';
 import { useHistory } from 'react-router-dom';
-import { Container, MainHeading } from '../../globalStyles';
+import { Button, Container, MainHeading } from '../../globalStyles';
 import { GalerieCard, GalerieVideo, GalerieSection, GalerieText, GalerieButton } from './GalerieStyles';
+import { ButtonWrapper } from '../Hero/HeroStyles';
+
+
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 const images = [
@@ -50,57 +53,55 @@ const Galerie = () => {
   }
 	return (
     <>
-    <GalerieSection>
-			<GalerieVideo src="./assets/galerie.mp4" autoPlay muted />
-			<Container>
-				<MainHeading>Sculptures</MainHeading>
-				<GalerieText>
-        L'art du modelage en papier mâché..
-				</GalerieText>
-        {data.img &&
-          <div style={{
-            width: '50%',
-            backgroundColor: 'white',
-            position: 'absolute',
-            display: 'flex',
-            justifyContent: 'center',
-            flexDirection: 'row',
-            boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
-          }}>
+      <GalerieSection>
+        <GalerieVideo src="./assets/galerie.mp4" autoPlay muted />
+        <Container>
+          <MainHeading>Sculptures</MainHeading>
+          <GalerieText>
+          L'art du modelage en papier mâché..
+          </GalerieText>
+          {data.img &&
+            <div style={{
+              width: '100%',
+              backgroundColor: 'white',
+              display: 'flex',
+              justifyContent: 'center',
+              boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
+            }}>
 
-          <GalerieButton>
-            <button onClick={()=> imgAction()} style={{position: 'absolute', top: '10px', right: '10px', border: 'round-5'}}> ❌ </button>
-            <button onClick={()=> imgAction('previous-img')}>Previous</button>
-            <img src={data.img} style={{width: '60%'}} alt="" />
-            <button onClick={()=> imgAction('next-img')}> Next </button>
-            </GalerieButton>
-          </div>
-        }
-			</Container>
-    </GalerieSection>
+            <GalerieButton>
+              <ButtonWrapper>
+                <Button onClick={()=> imgAction()} style={{position: 'absolute', top: '10px', right: '10px', border: 'round-5'}}> ❌ </Button>
+                <Button onClick={()=> imgAction('previous-img')}>Previous</Button>
+                <img src={data.img} style={{width: '60%'}} alt="" />
+                <Button onClick={()=> imgAction('next-img')}> Next </Button>
+              </ButtonWrapper>
+              </GalerieButton>
+            </div>
+          }
+        </Container>
+      </GalerieSection>
 
-      <div style={{padding: "100px"}}>
-        <ResponsiveMasonry
-          columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
-          >
-          <Masonry gutter="40px">
-              {images.map((image, i) => (
-                <GalerieCard>
-                <img
-                key={i}
-                src={image}
-                style={{width: "100%", display: "block", boxShadow: '0px 0px 10px 0px rgba(0,0,2,2.75)',}}
-                alt=""
-                onClick={()=> viewImage(image, i)}
-                />
-              </GalerieCard>
-                ))}
-          </Masonry>
-        </ResponsiveMasonry>
+        <div style={{padding: "50px"}}>
+          <ResponsiveMasonry
+            columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
+            >
+            <Masonry gutter="40px">
+                {images.map((image, i) => (
+                  <GalerieCard>
+                  <img
+                  key={i}
+                  src={image}
+                  style={{width: "100%", display: "block", boxShadow: '0px 0px 10px 0px rgba(0,0,2,2.75)',}}
+                  alt=""
+                  onClick={()=> viewImage(image, i)}
+                  />
+                </GalerieCard>
+                  ))}
+            </Masonry>
+          </ResponsiveMasonry>
+        </div>
       <Carousel />
-      </div>
-    <div>
-    </div>
     </>
 	);
 };

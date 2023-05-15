@@ -49,6 +49,16 @@ export const GalerieCard = styled.div`
 		transform: scale(1.06);
 		transition: all 0.3s ease-out;
 	}
+  @media screen and (max-width: 768px) {
+		max-width: 100% !important;
+		flex-basis: 100%;
+	}
+
+	img {
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
 `;
 
 export const GalerieCardInfo = styled.div`
