@@ -22,23 +22,23 @@ const Features = () => {
 	};
 
 	return (
-		<Section smPadding="50px 10px" position="relative" inverse id="about">
+		<Section smPadding="30px 10px" position="relative" inverse id="about">
 			<Container>
 				<FeatureTextWrapper>
-					<FeatureTitle>What We Offer</FeatureTitle>
+					<FeatureTitle>Comment Faire du Papier Mâché en 7 Étapes Simples et Amusantes</FeatureTitle>
 				</FeatureTextWrapper>
 				<FeatureWrapper>
 					{featuresData.map((el, index) => (
-						<FeatureColumn
-							initial={initial}
-							animate={animate}
-							transition={{ duration: 0.5 + index * 0.1 }}
-							key={index}
+            <FeatureColumn
+            initial={initial}
+            animate={animate}
+            transition={{ duration: 0.5 + index * 0.1 }}
+            key={index}
 						>
 							<FeatureImageWrapper className={el.imgClass}>
 								{el.icon}
 							</FeatureImageWrapper>
-							<FeatureName>{el.name}</FeatureName>
+              <FeatureName>{el.name}</FeatureName>
 							<FeatureText>{el.description}</FeatureText>
 						</FeatureColumn>
 					))}

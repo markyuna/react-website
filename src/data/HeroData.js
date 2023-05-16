@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+
+
 export const heroOne = {
 	reverse: true,
 	inverse: true,
@@ -18,29 +21,29 @@ export const heroTwo = {
 	topLine: {
 		text: 'Designed & Developed',
 	},
-	headline: 'Les bonnes pratiques',
-	description: 'Nos clients satisfaits après réception de leur commande',
-	buttonLabel: 'Voir les avis',
+	headline: 'Réalisation de commandes',
+	description: 'Vous avez un projet que vous souhaiteriez me soumettre. Contactez-moi, je serai heureux d’y réfléchir avec vous, et de vous réaliser un devis.',
+	buttonLabel: 'Demande de devis',
 
-	linkTo: '/more',
+	link: '/more',
 	imgStart: 'start',
 	img: './assets/svg/Connection.svg',
 	start: 'true',
 };
 
 export const heroThree = {
-	reverse: true,
-	inverse: true,
-	topLine: {
-		text: 'Highly reputed brand',
-	},
-	headline: 'Pourquoi nous? ',
-	description:
-		'Our 9 year experience have allowed us to use the most innovative technologies and methodologies',
-	buttonLabel: 'View Project',
-
-	linkTo: '/download',
-	imgStart: '',
-	img: './assets/svg/ChartUp.svg',
-	start: 'true',
+  reverse: true,
+  inverse: true,
+  topLine: {
+    text: 'FAIRE SOI-MÊME',
+  },
+  headline: 'Réalisez vos propres sculptures en papier mâché',
+  description:
+    'Déchirer, coller, peindre… ! Réalisez ca que vous avez en tete en papier mâché, toutes simples.',
+  buttonLabel: 'Je colle',
+  link: '/etapes',
+  imgStart: '',
+  img: './assets/svg/ChartUp.svg',
+  start: 'true',
+  
 };

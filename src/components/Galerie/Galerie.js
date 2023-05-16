@@ -1,17 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import Carousel from '../Carousel/Carousel';
 import { useHistory } from 'react-router-dom';
 import { Button, Container, MainHeading } from '../../globalStyles';
 import { GalerieCard, GalerieVideo, GalerieSection, GalerieText, GalerieButton } from './GalerieStyles';
 import { ButtonWrapper } from '../Hero/HeroStyles';
+import showModal from 'react-bootstrap/Modal';
 
-
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 const images = [
   "https://res.cloudinary.com/dxrttyi2g/image/upload/v1681639953/development/bzbiag9hqhvynrylo22hkuu7q7dr.jpg",
-    //...
    "https://res.cloudinary.com/dxrttyi2g/image/upload/v1681639947/development/ms0eh0x45i13sw24ar094v61ozbh.jpg",
    "https://res.cloudinary.com/dxrttyi2g/image/upload/v1681639055/development/6h3mefkeu4d8al73y4ikhlgcxv85.jpg",
    "https://res.cloudinary.com/dxrttyi2g/image/upload/v1681639494/development/mwyw9yndeul3wjygpt5ugibyqdpo.jpg",
@@ -26,9 +25,9 @@ const images = [
    "https://res.cloudinary.com/dxrttyi2g/image/upload/v1683904901/IMG_6064_lkmjvu.jpg",
 ]
 
-
 const Galerie = () => {
-  const [data, setData] = useState({img: '', i: 0})
+  const [data, setData] = useState({ img: '', i: 0 });
+  const [showModal, setShowModal] = useState(false);
   const history = useHistory();
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -37,60 +36,63 @@ const Galerie = () => {
     setHoveredIndex(index);
   };
   const viewImage = (img, i) => {
-    setData({img, i})
-  }
+    setData({ img, i });
+    setShowModal(true);
+  };
   const imgAction = (action) => {
     let i = data.i;
-    if(action === 'next-img'){
-      setData({img: images[i+1], i: i+1});
+    if (action === 'next-img') {
+      setData({ img: images[i + 1], i: i + 1 });
     }
-    if(action === 'previous-img'){
-      setData({img: images[i-1], i: i-1});
+    if (action === 'previous-img') {
+      setData({ img: images[i - 1], i: i - 1 });
     }
-    if(!action){
-      setData({img: '', i: 0});
+    if (!action) {
+      setData({ img: '', i: 0 });
     }
-  }
+  };
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
 	return (
     <>
       <GalerieSection>
         <GalerieVideo src="./assets/galerie.mp4" autoPlay muted />
         <Container>
           <MainHeading>Sculptures</MainHeading>
-          <GalerieText>
-          L'art du modelage en papier mâché..
-          </GalerieText>
-          {data.img &&
-            <div style={{
-              width: '100%',
-              backgroundColor: 'white',
-              display: 'flex',
-              justifyContent: 'center',
-              boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
-            }}>
-
-            <GalerieButton>
-              <ButtonWrapper>
-                <Button onClick={()=> imgAction()} style={{position: 'absolute', top: '10px', right: '10px', border: 'round-5'}}> ❌ </Button>
-                <Button onClick={()=> imgAction('previous-img')}>Previous</Button>
-                <img src={data.img} style={{width: '60%'}} alt="" />
-                <Button onClick={()=> imgAction('next-img')}> Next </Button>
-              </ButtonWrapper>
+          <GalerieText>L'art du modelage en papier mâché..</GalerieText>
+          {data.img && (
+            <div
+              style={{
+                width: '100%',
+                backgroundColor: 'transparent',
+                display: 'flex',
+                justifyContent: 'center',
+                boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
+              }}
+            >
+              <GalerieButton>
+                <ButtonWrapper>
+                  <Button onClick={() => imgAction()} style={{ position: 'absolute', top: '10px', right: '10px', border: 'round-5' }}>
+                    ❌
+                  </Button>
+                  <Button onClick={() => imgAction('previous-img')}>Previous</Button>
+                  <img src={data.img} style={{ width: '30%' }} alt="" />
+                  <Button onClick={() => imgAction('next-img')}> Next </Button>
+                </ButtonWrapper>
               </GalerieButton>
             </div>
-          }
+          )}
         </Container>
       </GalerieSection>
 
-        <div style={{padding: "50px"}}>
-          <ResponsiveMasonry
-            columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
-            >
-            <Masonry gutter="40px">
-                {images.map((image, i) => (
-                  <GalerieCard>
-                  <img
-                  key={i}
+      <div style={{ padding: '50px' }}>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+          <Masonry gutter="40px">
+            {images.map((image, i) => (
+              <GalerieCard key={i}>
+                <img
                   src={image}
                   style={{width: "100%", display: "block", boxShadow: '0px 0px 10px 0px rgba(0,0,2,2.75)',}}
                   alt=""

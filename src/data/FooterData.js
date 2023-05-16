@@ -38,7 +38,7 @@ const FooterData = () => {
     {
       title: 'Product',
       links: [
-        isAuthenticated ? { name: 'Profile', to: '/profile' } : { name: 'Conexion', to: '/LoginButton' },
+        isAuthenticated ? { name: 'Profile', to: '/profile' } : { name: 'Login', to: '/profile' },
         { name: 'Atelier', to: '/' },
         { name: 'Galerie', to: '/galerie' },
         { name: 'Team', to: '/' },
