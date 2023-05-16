@@ -4,13 +4,13 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
-
 import Galerie from './components/Galerie/Galerie';
+import Footer from './components/Footer/Footer';
+
 import Home from './pages/Home';
 import Pricing from './pages/PricingPage';
 import Apropos from './pages/Apropos';
 import Etape from './pages/EtapesPage';
-import Footer from './components/Footer/Footer';
 
 function App() {
 

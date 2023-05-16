@@ -21,7 +21,8 @@ export const ImageWrapper = styled.div`
 	height: 430px;
 
 	@media screen and (min-width: 440px) {
-		border: 1px solid #bebebe;
+		border: 0px solid #bebebe;
+    box-shadow: 0 0 32px 8px #d0d0d0;
 	}
 `;
 
