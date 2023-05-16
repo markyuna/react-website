@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+export const FeatureSection = styled.div`
+height: 60vh;
+background: linear-gradient(-60deg, #fa7c30 30%, rgba(0, 0, 0, 0) 40%), url('https://res.cloudinary.com/dxrttyi2g/image/upload/v1683904748/IMG_6360_nbzn1d.jpg');
+background-position: center;
+background-size: cover;
+padding-top: clamp(70px, 25vh, 220px);
+box-shadow: inset 0 0 0 1000px rgba (0, 0, 0, 0.2);
+`;
+
 export const FeatureTitle = styled.h2`
 	text-align: center;
 	font-size: clamp(1.3rem, 13vw, 3.1rem);

@@ -9,7 +9,7 @@ const Hero = () => {
 
 	return (
 		<HeroSection>
-			<HeroVideo src="./assets/hero.mp4" autoPlay muted />
+			{/* <HeroVideo src="./assets/hero.mp4" autoPlay muted /> */}
 			<Container>
 				<MainHeading>Marcos Suarez Romero</MainHeading>
 				<HeroText>

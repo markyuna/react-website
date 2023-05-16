@@ -14,7 +14,6 @@ export const Nav = styled.nav`
 	top: 0;
 	z-index: 50;
 	width: 100%;
-
 	transition: background-color 0.3s ease-in;
 `;
 
@@ -22,7 +21,8 @@ export const NavbarContainer = styled(Container)`
   margin-top: 2rem;
 	display: flex;
 	justify-content: start;
-	height: 100px;
+	height: 80px;
+
 	${Container}
 `;
 
@@ -135,22 +135,4 @@ export const NavBtnLink = styled(Link)`
 	width: 100%;
 	border: none;
 	outline: none;
-	color: #000000;
-
-	&:hover {
-		color: #c8c9d8;
-		transition: all 0.8s ease;
-	}
-
-	@media screen and (max-width: 960px) {
-		text-align: center;
-		padding: 1rem;
-		width: 100%;
-		display: table;
-
-		&:hover {
-			color: #4b59f7;
-			transition: all 0.3s ease;
-		}
-	}
 `;

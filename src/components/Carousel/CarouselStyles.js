@@ -8,9 +8,9 @@ export const CarouselImage = styled.img`
 	border-radius: 10px 10px 0 0;
 	object-fit: cover;
 	vertical-align: middle;
-`;
+  `;
 
-export const ImageWrapper = styled.div`
+  export const ImageWrapper = styled.div`
 	width: 90%;
 	display: flex !important;
 	justify-content: center;
@@ -19,9 +19,13 @@ export const ImageWrapper = styled.div`
 	border-radius: 10px;
 	outline: none;
 	height: 430px;
+  &:hover {
+		transform: scale(1.06);
+		transition: all 0.3s ease-out;
+	}
 
 	@media screen and (min-width: 440px) {
-		border: 1px solid #bebebe;
+		border: 0px solid #bebebe;
 	}
 `;
 

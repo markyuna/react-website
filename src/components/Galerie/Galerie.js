@@ -59,14 +59,14 @@ const Galerie = () => {
     <>
       <GalerieSection>
         <GalerieVideo src="./assets/galerie.mp4" autoPlay muted />
-        <Container>
           <MainHeading>Sculptures</MainHeading>
           <GalerieText>L'art du modelage en papier mâché..</GalerieText>
+        <Container>
           {data.img && (
             <div
               style={{
                 width: '100%',
-                backgroundColor: 'transparent',
+                backgroundColor: 'grey',
                 display: 'flex',
                 justifyContent: 'center',
                 boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
@@ -78,7 +78,7 @@ const Galerie = () => {
                     ❌
                   </Button>
                   <Button onClick={() => imgAction('previous-img')}>Previous</Button>
-                  <img src={data.img} style={{ width: '30%' }} alt="" />
+                  <img src={data.img} style={{ width: '40%' }} alt="" />
                   <Button onClick={() => imgAction('next-img')}> Next </Button>
                 </ButtonWrapper>
               </GalerieButton>
