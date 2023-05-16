@@ -2,11 +2,17 @@ import styled from 'styled-components';
 import { Button } from '../../globalStyles';
 
 export const HeroSection = styled.section`
+<<<<<<< HEAD
 	height: 60vh;
   background: linear-gradient(-60deg, #fa7c30 30%, rgba(0, 0, 0, 0) 40%), url('https://res.cloudinary.com/dxrttyi2g/image/upload/v1683904748/IMG_6360_nbzn1d.jpg');
 	background-position: center;
+=======
+height: 70vh;
+background: linear-gradient(-70deg, #fa7c30 20%, rgba(0, 0, 0, 0) 30%), url('./assets/homme.png');
+background-position: center;
+>>>>>>> dbafe7d2b4ca46e80cb072f5fc3e48368de07303
 	background-size: cover;
-	padding-top: clamp(70px, 25vh, 220px);
+	padding-top: clamp(50px, 25vh, 220px);
 	box-shadow: inset 0 0 0 1000px rgba (0, 0, 0, 0.2);
 
 `;
@@ -27,7 +33,7 @@ export const HeroText = styled.p`
 	line-height: 24px;
 	text-align: center;
 	letter-spacing: 2px;
-	color: #fff;
+	color: black;
 `;
 
 export const ButtonWrapper = styled.div`
