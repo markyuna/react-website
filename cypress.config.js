@@ -1,4 +1,17 @@
 const { defineConfig } = require("cypress");
+const domain = 'react-website-jb92';
+const baseDomain = 'react-website-jb92';
+
+const urls = [
+  `https://${baseDomain}.vercel.app`,
+  `https://${baseDomain}-markyuna.vercel.app`,
+  `https://${baseDomain}-git-master-markyuna.vercel.app`,
+  `https://${baseDomain}.vercel.app`,
+];
+
+const formattedUrls = urls.map((url) => `${domain}-${url}`);
+
+console.log(formattedUrls);
 
 module.exports = defineConfig({
   projectId: "aw1ahy",
