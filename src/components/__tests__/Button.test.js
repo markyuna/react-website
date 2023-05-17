@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import Button from '../Hero/Hero';
+import Button from './Button';
 
 describe('Button component', () => {
   it('renders button with correct text', () => {
