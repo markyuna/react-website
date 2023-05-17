@@ -39,7 +39,7 @@ export const NavLogo = styled(Link)`
 
 export const NavIcon = styled.img`
   margin-top: 5rem;
-	margin-right: 3rem;
+	margin-right: 4rem;
 	width: 10rem;
 `;
 
@@ -47,7 +47,7 @@ export const MobileIcon = styled.div`
 	display: none;
 	z-index: 50;
 
-	@media screen and (max-width: 960px) {
+	@media screen and (max-width: 768px) {
 		display: block;
 		position: absolute;
 		top: 0;
