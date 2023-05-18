@@ -1,12 +1,9 @@
 
-// ProductCard component
-
 import React from "react";
 import "./ProductCard.css";
 
-
 export default function ProductCard(props) {
-  // const clr = "#2196f3";
+  //const clr = "#2196f3";
   const { productDetails, colorCode } = props;
   const somstyle = {
     "--company": productDetails.ProductCompany,
@@ -18,10 +15,12 @@ export default function ProductCard(props) {
     <div className="productCard" style={somstyle}>
       <div className="imgBx">
         <img
-          src={require(`../../assets/images/${productDetails.productPhoto}`).default
+          src={
+            require(`../../assets/images/${productDetails.productPhoto}`)
           }
           alt=""
         />
+        {/* src={require(`../../assets/images/${certificate.logo_path}`)} */}
       </div>
       <div className="contentBx">
         <h3>{productDetails.productName}</h3>

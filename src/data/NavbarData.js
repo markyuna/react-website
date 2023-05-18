@@ -10,6 +10,6 @@ export const data = [
 	},
 	{
 		to: '/pricing',
-		text: 'Pricing',
+		text: 'Sculptures',
 	},
 ];

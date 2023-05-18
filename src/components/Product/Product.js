@@ -2,8 +2,7 @@ import React from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import "./Product.css";
 
-
-const Product = (props) => {
+const Product = () => {
   const colorCode = {
     blue: "#2196f3",
     black: "#505050",
@@ -16,48 +15,48 @@ const Product = (props) => {
   const productDetails = [
     {
       productKey: 1,
-      productName: "Coffre",
-      ProductCompany: "Markpaper",
-      productPhoto: "headphone.png", //1:1.38 aspect ratio
+      productName: "Phillips Headphone",
+      ProductCompany: "Phillips",
+      productPhoto: "lanterne2.png", // 1:1.38 aspect ratio
       productPrice: "49.99",
       productColor: "blue",
     },
     {
       productKey: 2,
-      productName: "Crane",
-      ProductCompany: "Markpaper",
-      productPhoto: "beats-headphone.png",
+      productName: "Beats Studio3",
+      ProductCompany: "Beats",
+      productPhoto: "iron.png",
       productPrice: "249.99",
       productColor: "yellow",
     },
     {
       productKey: 3,
       productName: "Apple AirPods Max",
-      ProductCompany: "Markpaper",
-      productPhoto: "apple-headphone.png",
+      ProductCompany: "Apple",
+      productPhoto: "lanterne.png",
       productPrice: "549.00",
       productColor: "ash",
     },
     {
       productKey: 4,
       productName: "Anker Life Q10",
-      ProductCompany: "Markpaper",
-      productPhoto: "red-headphone.png",
+      ProductCompany: "Anker",
+      productPhoto: "coffre.png",
       productPrice: "31.99",
       productColor: "red",
     },
     {
       productKey: 5,
-      productName: "Coffre",
-      ProductCompany: "Markpaper",
-      productPhoto: "headphone.png", //1:1.38 aspect ratio
+      productName: "Phillips Headphone",
+      ProductCompany: "Phillips",
+      productPhoto: "coffre.png", // 1:1.38 aspect ratio
       productPrice: "49.99",
       productColor: "blue",
     },
     {
       productKey: 6,
-      productName: "Crane",
-      ProductCompany: "Markpaper",
+      productName: "Beats Studio3",
+      ProductCompany: "Beats",
       productPhoto: "beats-headphone.png",
       productPrice: "249.99",
       productColor: "yellow",
@@ -65,7 +64,7 @@ const Product = (props) => {
     {
       productKey: 7,
       productName: "Apple AirPods Max",
-      ProductCompany: "Markpaper",
+      ProductCompany: "Apple",
       productPhoto: "apple-headphone.png",
       productPrice: "549.00",
       productColor: "ash",
@@ -73,7 +72,7 @@ const Product = (props) => {
     {
       productKey: 8,
       productName: "Anker Life Q10",
-      ProductCompany: "Markpaper",
+      ProductCompany: "Anker",
       productPhoto: "red-headphone.png",
       productPrice: "31.99",
       productColor: "red",
