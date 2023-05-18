@@ -137,27 +137,27 @@ export const Button = styled.button`
 	overflow: hidden;
 	position: relative;
 
-	&:before {
-		background: #fff;
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: -1;
-		transition: all 0.6s ease;
-		width: 100%;
-		height: 0%;
-		transform: translate(-50%, -50%) rotate(45deg);
-	}
+	// &:before {
+	// 	background: #fff;
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -50%);
+	// 	z-index: -1;
+	// 	transition: all 0.6s ease;
+	// 	width: 100%;
+	// 	height: 0%;
+	// 	transform: translate(-50%, -50%) rotate(45deg);
+	// }
 
-	&:hover:before {
-		height: 500%;
-	}
+	// &:hover:before {
+	// 	height: 500%;
+	// }
 
-	&:hover {
-		color: black;
-	}
+	// &:hover {
+	// 	color: black;
+	// }
 `;
 
 export default GlobalStyle;

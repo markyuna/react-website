@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+
 // ProductCard component
-import { Link } from 'react-router-dom';
 
 import React from "react";
 import "./ProductCard.css";
@@ -29,9 +28,9 @@ export default function ProductCard(props) {
         <h2 className="price">
           ${productPrice[0]}.<small>{productPrice[1]}</small>
         </h2>
-        <Link className="buy">
+        <a href="#" className="buy">
           Buy Now
-        </Link>
+        </a>
       </div>
     </div>
   );

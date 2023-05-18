@@ -3,7 +3,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import "./Product.css";
 
 
-const Product = () => {
+const Product = (props) => {
   const colorCode = {
     blue: "#2196f3",
     black: "#505050",
@@ -40,6 +40,38 @@ const Product = () => {
     },
     {
       productKey: 4,
+      productName: "Anker Life Q10",
+      ProductCompany: "Markpaper",
+      productPhoto: "red-headphone.png",
+      productPrice: "31.99",
+      productColor: "red",
+    },
+    {
+      productKey: 5,
+      productName: "Coffre",
+      ProductCompany: "Markpaper",
+      productPhoto: "headphone.png", //1:1.38 aspect ratio
+      productPrice: "49.99",
+      productColor: "blue",
+    },
+    {
+      productKey: 6,
+      productName: "Crane",
+      ProductCompany: "Markpaper",
+      productPhoto: "beats-headphone.png",
+      productPrice: "249.99",
+      productColor: "yellow",
+    },
+    {
+      productKey: 7,
+      productName: "Apple AirPods Max",
+      ProductCompany: "Markpaper",
+      productPhoto: "apple-headphone.png",
+      productPrice: "549.00",
+      productColor: "ash",
+    },
+    {
+      productKey: 8,
       productName: "Anker Life Q10",
       ProductCompany: "Markpaper",
       productPhoto: "red-headphone.png",

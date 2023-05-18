@@ -4,7 +4,6 @@ export const pricingData = [
 		price: '$7.99 user/month after offer period',
 		numAcc: '50-100 accounts',
 		features: ['Secure accounts', 'Best for small business', 'Easy', 'Affordable', '1GB RAM'],
-    productPhoto: './assets/images/IMG_3316.jpg',
 	},
 	{
 		title: 'Standard',
