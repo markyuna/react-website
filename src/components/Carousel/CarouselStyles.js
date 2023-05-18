@@ -26,7 +26,10 @@ export const CarouselImage = styled.img`
 
 	@media screen and (min-width: 440px) {
 		border: 0px solid #bebebe;
+<<<<<<< HEAD
+=======
     box-shadow: 0 0 32px 8px #d0d0d0;
+>>>>>>> dbafe7d2b4ca46e80cb072f5fc3e48368de07303
 	}
 `;
 
