@@ -19,7 +19,7 @@ const Product = () => {
       ProductCompany: "Phillips",
       productPhoto: "lanterne2.png", // 1:1.38 aspect ratio
       productPrice: "49.99",
-      productColor: "blue",
+      productColor: "ash",
     },
     {
       productKey: 2,
@@ -27,7 +27,7 @@ const Product = () => {
       ProductCompany: "Beats",
       productPhoto: "iron.png",
       productPrice: "249.99",
-      productColor: "yellow",
+      productColor: "ash",
     },
     {
       productKey: 3,
@@ -43,7 +43,7 @@ const Product = () => {
       ProductCompany: "Anker",
       productPhoto: "coffre.png",
       productPrice: "31.99",
-      productColor: "red",
+      productColor: "ash",
     },
     {
       productKey: 5,
@@ -51,7 +51,7 @@ const Product = () => {
       ProductCompany: "Phillips",
       productPhoto: "coffre.png", // 1:1.38 aspect ratio
       productPrice: "49.99",
-      productColor: "blue",
+      productColor: "ash",
     },
     {
       productKey: 6,
@@ -59,7 +59,7 @@ const Product = () => {
       ProductCompany: "Beats",
       productPhoto: "beats-headphone.png",
       productPrice: "249.99",
-      productColor: "yellow",
+      productColor: "ash",
     },
     {
       productKey: 7,
@@ -75,7 +75,7 @@ const Product = () => {
       ProductCompany: "Anker",
       productPhoto: "red-headphone.png",
       productPrice: "31.99",
-      productColor: "red",
+      productColor: "ash",
     },
   ];
 
