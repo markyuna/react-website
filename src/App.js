@@ -1,4 +1,3 @@
-
 import React from 'react';
 import GlobalStyle from './globalStyles';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -12,22 +11,19 @@ import Home from './pages/Home';
 import Pricing from './pages/PricingPage';
 import Apropos from './pages/Apropos';
 import Etape from './pages/EtapesPage';
-// import Checkout from './pages/CheckoutPage';
 
 function App() {
-
   return (
-      <BrowserRouter>
+    <BrowserRouter>
       <GlobalStyle />
       <Navbar />
       <Routes>
-        <Route exact path="/" component={Home} />
-        <Route path="/apropos" component={Apropos} />
-        <Route path="/pricing" component={Pricing} />
-        <Route path="/galerie" component={Galerie} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/etapes" component={Etape} />
-        {/* <Route path="/checkout" element={Checkout} /> */}
+        <Route path="/" element={<Home />} />
+        <Route path="/apropos" element={<Apropos />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/galerie" element={<Galerie />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/etapes" element={<Etape />} />
       </Routes>
       <Footer />
     </BrowserRouter>

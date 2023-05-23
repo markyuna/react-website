@@ -1,11 +1,11 @@
 // component name: Hero
 import React from 'react';
-import { useNavigation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button, Container, MainHeading } from '../../globalStyles';
 import { HeroSection, HeroText, ButtonWrapper, HeroButton } from './HeroStyles';
 
 const Hero = () => {
-	const history = useNavigation();
+  const navigate = useNavigate();
 
 	// return (
 	// 	<HeroSection>
@@ -16,7 +16,7 @@ const Hero = () => {
 	// 				Découvrez le charme du papier mâché dans mes créations artistiques.
 	// 			</HeroText>
 	// 			<ButtonWrapper>
-	// 				<Button onClick={() => history.push('/galerie')}>Voir les oeuvres</Button>
+	// 				<Button onClick={() => navigate.push('/galerie')}>Voir les oeuvres</Button>
 	// 				<HeroButton>Find More</HeroButton>
 	// 			</ButtonWrapper>
 	// 		</Container>
@@ -24,19 +24,19 @@ const Hero = () => {
 	// );
 
   return (
-		<HeroSection>
-			<Container>
-				<MainHeading>Marcos Suarez Romero</MainHeading>
-				<HeroText>
-					Découvrez le charme du papier mâché dans mes créations artistiques.
-				</HeroText>
-				<ButtonWrapper>
-					<Button onClick={() => history.push('/galerie')}>Voir les oeuvres</Button>
-					<HeroButton>Find More</HeroButton>
-				</ButtonWrapper>
-			</Container>
-		</HeroSection>
-	);
+    <HeroSection>
+      <Container>
+        <MainHeading>Marcos Suarez Romero</MainHeading>
+        <HeroText>
+          Découvrez le charme du papier mâché dans mes créations artistiques.
+        </HeroText>
+        <ButtonWrapper>
+          <Button onClick={() => navigate('/galerie')}>Voir les oeuvres</Button>
+          <HeroButton>Find More</HeroButton>
+        </ButtonWrapper>
+      </Container>
+    </HeroSection>
+  );
 };
 
 export default Hero;
