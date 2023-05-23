@@ -12,7 +12,7 @@ import {
 import { Container } from '../../globalStyles';
 
 
-function Profile() {
+const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {

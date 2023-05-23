@@ -1,11 +1,11 @@
 // component name: Hero
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigation } from 'react-router-dom';
 import { Button, Container, MainHeading } from '../../globalStyles';
 import { HeroSection, HeroText, ButtonWrapper, HeroButton } from './HeroStyles';
 
 const Hero = () => {
-	const history = useHistory();
+	const history = useNavigation();
 
 	// return (
 	// 	<HeroSection>
