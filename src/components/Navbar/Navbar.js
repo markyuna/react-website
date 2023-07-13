@@ -3,11 +3,11 @@ import { CgMenuRight } from 'react-icons/cg';
 import { FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import { Nav, NavbarContainer, NavLogo, NavIcon, MobileIcon, NavMenu, NavLinks, NavItem } from './NavbarStyles.js';
-import { data } from '../../data/NavbarData';
+import { data } from '../../data/NavbarData.js';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-import LoginButton from '../Form/Login';
-import LogoutButton from '../Form/Logout';
+import LoginButton from '../Form/Login.js';
+import LogoutButton from '../Form/Logout.js';
 
 const Navbar = () => {
   const { isAuthenticated } = useAuth0();
@@ -41,7 +41,7 @@ const Navbar = () => {
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">
-            <NavIcon src="./assets/logo.png" alt="logo" />
+            <NavIcon src="./assets/logo.png" alt="logo" role="logo"/>
           </NavLogo>
           <MobileIcon onClick={handleClick}>
             {show ? <FaTimes /> : <CgMenuRight />}

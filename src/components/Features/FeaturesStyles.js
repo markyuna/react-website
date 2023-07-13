@@ -20,15 +20,15 @@ export const FeatureTitle = styled.h2`
 
 export const FeatureTextWrapper = styled.div`
 	position: relative;
-	padding: 0 0 20px;
+	padding: 0 0 10px;
 	margin-bottom: 2rem;
 `;
 
 export const FeatureWrapper = styled.div`
 	display: grid;
-  box-sizing: border-box;
+    box-sizing: border-box;
 	grid-template-rows: repeat(2, 1fr);
-	grid-gap: 2rem;
+	grid-gap: 3rem;
 
 	@media screen and (max-width: 1100px) {
 		grid-template-rows: repeat(2, 1fr);
@@ -37,18 +37,18 @@ export const FeatureWrapper = styled.div`
 
 	@media screen and (max-width: 290px) {
 		grid-template-rows: repeat(2, 1fr);
-    max-width: 50%;
+  		max-width: 50%;
 	}
 `;
 
 export const FeatureColumn = styled(motion.div)`
 	display: flex;
 	flex-flow: row;
-  flex-direction: column;
+    flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	background: #f3f3f3;
-	padding: 40px;
+	padding: 20px;
 	box-shadow: 0 0 32px 8px #d0d0d0;
 	border-radius: 20px;
 `;
@@ -59,20 +59,20 @@ export const FeatureImageWrapper = styled.div`
 `;
 export const FeatureName = styled.h3`
 	font-weight: 600;
-	font-size: 2.3rem;
+	font-size: 1.8rem;
 	letter-spacing: 2px;
-  padding: 20px;
+    padding: 10px;
 
 	@media screen and (max-width: 390px) {
 		font-weight: 400;
 		font-size: 1rem;
-		letter-spacing: 1.3px;
+		letter-spacing: 1.2px;
 	}
 `;
 export const FeatureText = styled.p`
-	margin: 1rem 20px auto;
+	margin: 1rem 10px auto;
 	text-align: justify;
-	font-size: 1.8rem;
+	font-size: 1.2rem;
 	line-height: 1.73;
 	letter-spacing: 0.5px;
 	color: #626881;

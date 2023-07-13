@@ -11,7 +11,7 @@ export const featuresData = [
 	{
 		name: 'Étape 1 : Commencez à déchiqueter',
 		description: 'Si vous avez raté cette partie de votre enfance et que vous vous êtes demandé comment faire du papier mâché, ce tutoriel est pour vous. Commence à déchirer les pages de vieux magazines ou journaux. Pour ce projet, j\'ai utilisé environ 5 pages. Vous pouvez utiliser n\'importe quel papier de rebut, mais les journaux et les magazines sont les plus efficaces. Plus il y a de variété, mieux c\'est. Des papiers différents, comme le papier de soie, sont acceptables, mais il ne faut pas utiliser de papier avec une finition superficielle (brillant, par exemple), car il ne collera probablement pas très bien.  Déchirer le papier en bandes plutôt que de le couper permet également de créer un bord plus absorbant, ce qui permet de coller davantage.',
-    icon: iconStyle(BsFillLightbulbFill),
+        icon: iconStyle(BsFillLightbulbFill),
 		imgClass: 'one',
 	},
 	{

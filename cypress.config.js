@@ -1,4 +1,4 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from "cypress";
 const domain = 'react-website-jb92';
 const baseDomain = 'react-website-jb92';
 
@@ -13,7 +13,7 @@ const formattedUrls = urls.map((url) => `${domain}-${url}`);
 
 console.log(formattedUrls);
 
-module.exports = defineConfig({
+export default defineConfig({
   projectId: "aw1ahy",
   plugins: [],
 
