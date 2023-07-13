@@ -10,8 +10,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-	width: 80%;
-	max-width: 1300px;
+	width: 50%;
+	max-width: 1100px;
 	margin-right: auto;
 	margin-left: auto;
 
@@ -24,12 +24,12 @@ export const MainHeading = styled.h1`
 	margin-bottom: 2rem;
 	color: ${({ inverse }) => (inverse ? '$403ae3' : '#1a1308')};
 	width: 100%;
-	letter-spacing: 4px;
+	letter-spacing: 2px;
   color: #000000;
 	text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
 	&:hover {
     color: #c8c9d8;

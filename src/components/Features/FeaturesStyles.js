@@ -12,9 +12,9 @@ box-shadow: inset 0 0 0 1000px rgba (0, 0, 0, 0.2);
 
 export const FeatureTitle = styled.h2`
 	text-align: center;
-	font-size: clamp(1.3rem, 13vw, 3.1rem);
-	line-height: 1.06;
-	letter-spacing: 0.4rem;
+	font-size: clamp(1rem, 13vw, 2.1rem);
+	line-height: 1;
+	letter-spacing: 0.1rem;
 	margin: auto;
 `;
 
@@ -37,7 +37,7 @@ export const FeatureWrapper = styled.div`
 
 	@media screen and (max-width: 290px) {
 		grid-template-rows: repeat(2, 1fr);
-  		max-width: 50%;
+  		max-width: 60%;
 	}
 `;
 
@@ -58,7 +58,7 @@ export const FeatureImageWrapper = styled.div`
 	border: 2px solid #000;
 `;
 export const FeatureName = styled.h3`
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 1.8rem;
 	letter-spacing: 2px;
     padding: 10px;
