@@ -1,5 +1,6 @@
-/* eslint-disable no-unused-vars */
+
 import React, { useState } from 'react';
+import {View} from 'react-viewer';
 import Carousel from '../Carousel/Carousel';
 import { useHistory } from 'react-router-dom';
 import { Button, Container, MainHeading } from '../../globalStyles';
@@ -63,7 +64,7 @@ const Galerie = () => {
           <MainHeading>Sculptures</MainHeading>
           <GalerieText>L'art du modelage en papier mâché..</GalerieText>
           {data.img && (
-            <div
+            <View
               style={{
                 width: '100%',
                 backgroundColor: 'transparent',
@@ -82,7 +83,7 @@ const Galerie = () => {
                   <Button onClick={() => imgAction('next-img')}> Next </Button>
                 </ButtonWrapper>
               </GalerieButton>
-            </div>
+            </View>
           )}
         </Container>
       </GalerieSection>
