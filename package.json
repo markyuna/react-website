@@ -2,29 +2,51 @@
   "name": "react-website",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "@auth0/auth0-react": "^2.1.0",
+    "@babel/preset-react": "^7.18.6",
     "@craco/craco": "^7.1.0",
+    "@cypress/webpack-preprocessor": "^5.17.1",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@stripe/react-stripe-js": "^2.1.0",
     "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/react-router-dom": "^5.3.3",
+    "accounting": "^0.4.1",
+    "axios": "^1.4.0",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "cypress": "^12.12.0",
     "framer-motion": "^4.1.17",
+    "html-webpack-plugin": "^5.5.1",
+    "i": "^0.3.7",
     "install": "^0.13.0",
     "npm": "^9.8.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-icons": "^4.8.0",
     "react-intersection-observer": "^8.32.1",
     "react-responsive-masonry": "^2.1.7",
-    "react-router-dom": "5.3.0",
+    "react-router-dom": "^6.11.2",
     "react-scripts": "^5.0.1",
-    "react-slick": "^0.28.1",
+    "react-slick": "^0.29.0",
+    "react-test-renderer": "^18.2.0",
     "react-viewer": "^3.2.2",
+    "slick-carousel": "^1.8.1",
+    "style-loader": "^3.3.2",
     "styled-components": "^5.3.1",
     "swr": "^2.1.5",
-    "web-vitals": "^2.1.4"
+    "undefined": "^0.1.0",
+    "update": "^0.7.4",
+    "uuid": "^9.0.0",
+    "web-vitals": "^3.3.1",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -50,6 +72,7 @@
       "last 1 safari version"
     ]
   },
+<<<<<<< HEAD
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
@@ -60,4 +83,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
+=======
+  "devDependencies": {
+    "@playwright/test": "^1.36.0",
+    "@testing-library/jest-native": "^5.4.2",
+    "@types/jest": "^29.5.1",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "@types/testing-library__react": "^10.2.0",
+    "jest": "^29.5.0"
+  }
+>>>>>>> be6b23504b51cadc3ed6658426e52e3766f6622e
 }

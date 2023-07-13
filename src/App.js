@@ -1,6 +1,6 @@
 import React from 'react';
 import GlobalStyle from './globalStyles';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
@@ -13,20 +13,18 @@ import Apropos from './pages/Apropos';
 import Etape from './pages/EtapesPage';
 
 function App() {
-
-
   return (
     <BrowserRouter>
       <GlobalStyle />
       <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/apropos" component={Apropos} />
-        <Route path="/pricing" component={Pricing} />
-        <Route path="/galerie" component={Galerie} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/etapes" component={Etape} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/apropos" element={<Apropos />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/galerie" element={<Galerie />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/etapes" element={<Etape />} />
+      </Routes>
       <Footer />
     </BrowserRouter>
   );

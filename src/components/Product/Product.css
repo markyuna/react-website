@@ -1,0 +1,6 @@
+.product {
+  display: flex;
+  margin-top: 200px !important;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

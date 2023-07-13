@@ -10,13 +10,13 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-	width: 100%;
-	max-width: 1300px;
+	width: 50%;
+	max-width: 1100px;
 	margin-right: auto;
 	margin-left: auto;
 
 	@media screen and (max-width: 960px) {
-		padding: 0 30px;
+		padding: 0 10px;
 	}
 `;
 export const MainHeading = styled.h1`
@@ -24,12 +24,12 @@ export const MainHeading = styled.h1`
 	margin-bottom: 2rem;
 	color: ${({ inverse }) => (inverse ? '$403ae3' : '#1a1308')};
 	width: 100%;
-	letter-spacing: 4px;
+	letter-spacing: 2px;
   color: #000000;
 	text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
 	&:hover {
     color: #c8c9d8;
@@ -38,7 +38,7 @@ export const MainHeading = styled.h1`
 
 	@media screen and (max-width: 1640px) {
     text-align: center;
-		width: 100%;
+		width: 50%;
 		display: table;
 
 		&:hover {
@@ -151,13 +151,13 @@ export const Button = styled.button`
 		transform: translate(-50%, -50%) rotate(45deg);
 	}
 
-	&:hover:before {
+		&:hover:before {
 		height: 500%;
-	}
+		}
 
-	&:hover {
+		&:hover {
 		color: black;
-	}
+		}
 `;
 
 export default GlobalStyle;

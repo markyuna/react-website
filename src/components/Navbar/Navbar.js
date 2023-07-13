@@ -2,30 +2,17 @@ import React, { useState } from 'react';
 import { CgMenuRight } from 'react-icons/cg';
 import { FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
-import {
-  Nav,
-  NavbarContainer,
-  NavLogo,
-  NavIcon,
-  MobileIcon,
-  NavMenu,
-  NavLinks,
-  NavItem,
-} from './NavbarStyles.js';
-import { data } from '../../data/NavbarData';
-import { useHistory, useLocation } from 'react-router-dom';
-
+import { Nav, NavbarContainer, NavLogo, NavIcon, MobileIcon, NavMenu, NavLinks, NavItem } from './NavbarStyles.js';
+import { data } from '../../data/NavbarData.js';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-
-import LoginButton from '../Form/Login';
-import LogoutButton from '../Form/Logout';
+import LoginButton from '../Form/Login.js';
+import LogoutButton from '../Form/Logout.js';
 
 const Navbar = () => {
-
   const { isAuthenticated } = useAuth0();
-
   const [show, setShow] = useState(false);
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
 
   const handleClick = () => {
@@ -45,7 +32,7 @@ const Navbar = () => {
       scrollTo(id);
     }
 
-    history.push(to);
+    navigate(to);
     setShow(false);
   };
 
@@ -54,7 +41,7 @@ const Navbar = () => {
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">
-            <NavIcon src="./assets/logo.png" alt="logo" />
+            <NavIcon src="./assets/logo.png" alt="logo" role="logo"/>
           </NavLogo>
           <MobileIcon onClick={handleClick}>
             {show ? <FaTimes /> : <CgMenuRight />}
@@ -68,17 +55,14 @@ const Navbar = () => {
               </NavItem>
             ))}
             {isAuthenticated ? (
-              <>
-                <NavItem>
+              <NavItem>
                 <LogoutButton />
-                </NavItem>
-              </>
+              </NavItem>
             ) : (
               <NavItem>
                 <LoginButton />
               </NavItem>
             )}
-
           </NavMenu>
         </NavbarContainer>
       </Nav>

@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 
 export const heroOne = {
 	reverse: true,
@@ -45,5 +43,5 @@ export const heroThree = {
   imgStart: '',
   img: './assets/svg/ChartUp.svg',
   start: 'true',
-  
+
 };
