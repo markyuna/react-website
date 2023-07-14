@@ -1,5 +1,17 @@
 // example.test.js
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
+
+const {chromium} = require('@playwright/test');
+
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
+  await page.setViewport({ width: 1280, height: 800 });
+  await page.goto('http://localhost:3000/', {
+    waitUntil: 'networkidle',
+  });
+  await page.screenshot({ path: 'example.png' });
+})();
 
 test('has title', async ({ page }) => {
   await page.goto('http://localhost:3000/');
@@ -8,11 +20,10 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/React App/);
 });
 
-test('Sculptures link', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+test('Sculptures link', async ({ page, browser }) => {
 
   // Espera a que la página esté completamente cargada.
-  await page.waitForLoadState('networkidle');
+  await page.goto('http://localhost:3000/');
 
   // Espera un tiempo adicional antes de buscar el enlace.
   await page.waitForTimeout(2000);
@@ -25,4 +36,6 @@ test('Sculptures link', async ({ page }) => {
 
   // Verifica que la URL contenga "intro".
   await expect(page).toHaveURL(/.*intro/);
+
+  afterAll(() => browser.close());
 });

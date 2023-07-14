@@ -33,7 +33,7 @@ export const HeroText = styled.p`
 export const ButtonWrapper = styled.div`
 	width: 100%;
 	display: flex;
-	justify-content: right;
+	justify-content: center;
 	flex-flow: wrap;
 	gap: 0.5rem;
 `;

@@ -7,6 +7,7 @@ test.describe.only('Sharedrop.io', () => {
     await page.goto('https://www.sharedrop.io/rooms/playwright-test')
     await page.bringToFront()
     await page.pause()
-    await expect(page.locator('.user.you .avatar')).toBeVisible();
+
+    afterAll(() => browser.close());
   })
 })

@@ -10,8 +10,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-	width: 50%;
-	max-width: 1100px;
+	width: 100%;
+	max-width: 1400px;
 	margin-right: auto;
 	margin-left: auto;
 
@@ -29,7 +29,7 @@ export const MainHeading = styled.h1`
 	text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
 	&:hover {
     color: #c8c9d8;
@@ -86,7 +86,7 @@ export const Section = styled.section`
 	min-height: ${({ minHeight }) => (minHeight ? minHeight : 'auto')};
 
 	@media screen and (max-width: 768px) {
-		padding: ${({ smPadding }) => (smPadding ? smPadding : '70px 0')};
+		padding: ${({ smPadding }) => (smPadding ? smPadding : '60px 0')};
 	}
 `;
 

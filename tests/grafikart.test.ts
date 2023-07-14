@@ -11,6 +11,6 @@ test.describe('Grafikart', () => {
       body: '[]',
     }))
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight))
-    await expect(page.locator('.comments__title')).toHaveText('5 commentaire')
+    await expect(page.locator('.comments__title')).toHaveText('0 commentaire')
   })
 })

@@ -32,7 +32,7 @@ export const GalerieButton = styled(Button)`
 
 	&:before {
 		background: #fff;
-		height: 300%;
+		height: 200%;
 	}
 
 	&:hover:before {

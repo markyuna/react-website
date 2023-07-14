@@ -1,12 +1,9 @@
-
 import React, { useState } from 'react';
-import {View} from 'react-viewer';
 import Carousel from '../Carousel/Carousel';
 import { useNavigate } from 'react-router-dom';
 import { Button, Container, MainHeading } from '../../globalStyles';
 import { GalerieCard, GalerieVideo, GalerieSection, GalerieText, GalerieButton } from './GalerieStyles';
 import { ButtonWrapper } from '../Hero/HeroStyles';
-import { setShowModal } from 'react-bootstrap';
 
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
@@ -24,14 +21,11 @@ const images = [
   "https://res.cloudinary.com/dxrttyi2g/image/upload/v1683904901/IMG_6066_nfdvuu.jpg",
   "https://res.cloudinary.com/dxrttyi2g/image/upload/v1683904901/IMG_7555_vv3cwn.jpg",
   "https://res.cloudinary.com/dxrttyi2g/image/upload/v1683904901/IMG_6064_lkmjvu.jpg",
-]
+];
 
 const Galerie = () => {
   const [data, setData] = useState({ img: '', i: 0 });
-  const [showModal, setShowModal] = useState(false); // Add setShowModal state
-
   const history = useNavigate();
-  console.log(history)
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleImageHover = (index) => {
@@ -40,7 +34,6 @@ const Galerie = () => {
 
   const viewImage = (img, i) => {
     setData({ img, i });
-    setShowModal(true);
   };
 
   const imgAction = (action) => {
@@ -59,24 +52,21 @@ const Galerie = () => {
     }
   };
 
-  const closeModal = () => {
-    setShowModal(false);
-  };
-
-	return (
+  return (
     <>
       <GalerieSection>
         <GalerieVideo src="./assets/galerie.mp4" autoPlay muted />
-          <MainHeading>Sculptures</MainHeading>
-          <GalerieText>L'art du modelage en papier mâché..</GalerieText>
+        <MainHeading>Sculptures</MainHeading>
+        <GalerieText>L'art du modelage en papier mâché..</GalerieText>
         <Container>
           {data.img && (
-            <View
+            <view
               style={{
                 width: '100%',
                 backgroundColor: 'grey',
                 display: 'flex',
                 justifyContent: 'center',
+                alignItems: 'center',
                 boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
               }}
             >
@@ -90,7 +80,7 @@ const Galerie = () => {
                   <Button onClick={() => imgAction('next-img')}> Next </Button>
                 </ButtonWrapper>
               </GalerieButton>
-            </View>
+            </view>
           )}
         </Container>
       </GalerieSection>
@@ -102,18 +92,18 @@ const Galerie = () => {
               <GalerieCard key={i}>
                 <img
                   src={image}
-                  style={{width: "100%", display: "block", boxShadow: '0px 0px 10px 0px rgba(0,0,2,2.75)',}}
+                  style={{ width: '100%', display: 'block', boxShadow: '0px 0px 10px 0px rgba(0,0,2,2.75)' }}
                   alt=""
-                  onClick={()=> viewImage(image, i)}
-                  />
-                </GalerieCard>
-                  ))}
-            </Masonry>
-          </ResponsiveMasonry>
-        </div>
+                  onClick={() => viewImage(image, i)}
+                />
+              </GalerieCard>
+            ))}
+          </Masonry>
+        </ResponsiveMasonry>
+      </div>
       <Carousel />
     </>
-	);
+  );
 };
 
 export default Galerie;
