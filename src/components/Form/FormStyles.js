@@ -21,7 +21,7 @@ export const FormContainer = styled.div`
 export const FormColumn = styled.div`
 	/* margin-bottom: 15px; */
 	padding: 50px;
-	background: white;
+	background: linear-gradient(-60deg, #fa7c30 45%, rgba(0, 0, 0, 0) 40%), url('https://res.cloudinary.com/dxrttyi2g/image/upload/v1689338298/profile_card_jjuoyg.jpg');
 	border: 20px;
 	/* padding: ${({ small }) => (small ? '0 50px' : '0 15px')}; */
 	flex: 1;
