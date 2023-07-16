@@ -1,6 +1,6 @@
 import React from "react";
 import ProductCard from "../ProductCard/ProductCard";
-import "./Product.css";
+import "./Product";
 
 const Product = () => {
   const colorCode = {
