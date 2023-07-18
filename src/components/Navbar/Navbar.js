@@ -9,7 +9,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from '../Form/Login.js';
 import LogoutButton from '../Form/Logout.js';
 
-const Navbar = () => {
+export default function Navbar() {
   const { isAuthenticated } = useAuth0();
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <IconContext.Provider value={{ color: '#fff' }}>
       <Nav>
-        <NavbarContainer>
+        <NavbarContainer role="navbar">
           <NavLogo to="/">
             <NavIcon src="./assets/logo.png" alt="logo" role="logo"/>
           </NavLogo>
@@ -70,4 +70,3 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;

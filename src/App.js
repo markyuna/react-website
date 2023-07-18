@@ -12,6 +12,7 @@ import Pricing from './pages/PricingPage';
 import Apropos from './pages/Apropos';
 import Etape from './pages/EtapesPage';
 
+
 function App() {
   return (
     <BrowserRouter>

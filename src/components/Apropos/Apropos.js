@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container, MainHeading } from '../../globalStyles';
 import { AproposSection, AproposText,  } from './AproposStyles';
-
+import MainBox from '../MainBox';
 
 const Apropos = () => {
 
@@ -14,6 +14,7 @@ const Apropos = () => {
 				<AproposText>
         L'art du modelage en papier mâché..
 				</AproposText>
+        <MainBox />
 			</Container>
     </AproposSection>
     </>

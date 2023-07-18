@@ -17,7 +17,7 @@
     "cypress": "^12.12.0",
     "framer-motion": "^4.1.17",
     "html-webpack-plugin": "^5.5.1",
-    "playwright": "^1.36.0",
+    "preact": "^10.16.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
@@ -46,7 +46,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test-ct": "playwright test -c playwright-ct.config.js"
   },
   "eslintConfig": {
     "extends": [
@@ -69,6 +70,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.36.1",
     "@playwright/test": "^1.36.0",
     "@testing-library/dom": "^9.3.1",
     "@testing-library/jest-dom": "^5.16.5",
