@@ -14,8 +14,8 @@ const Apropos = () => {
 				<AproposText>
         L'art du modelage en papier mâché..
 				</AproposText>
-        <MainBox />
 			</Container>
+      <MainBox />
     </AproposSection>
     </>
   );

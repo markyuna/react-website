@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
+
 import './MainBoxStyles.css';
 
-function MainBox(){
+export default function MainBox(){
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([
         {
@@ -96,5 +97,3 @@ function MainBox(){
 		</div>
     );
 }
-
-export default MainBox;
