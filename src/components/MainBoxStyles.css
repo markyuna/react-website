@@ -15,16 +15,27 @@
 }
 
 .container {
-  margin: 30px;
+  position: relative;
+  display: flex;
+  /* width: 200px;
+  height: 300px; */
+  /* margin: 30px;
   background: #122936;
   border-radius: 20px;
   overflow: hidden;
-  width: 400px;
-  height: 500px;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
+}
+
+.chatbot-icon {
+  /* Estilo para la imagen del chatbot */
+  cursor: pointer;
+}
+
+/* Estilo para ocultar el chatbox cuando está cerrado */
+.chatbox:not(.isChatOpen) {
+  display: none;
 }
 
 .response-area {

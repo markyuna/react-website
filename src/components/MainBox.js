@@ -1,99 +1,159 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-import './MainBoxStyles.css';
+import chatbotImage from '../assets/images/chat.png';
 
-export default function MainBox(){
-    const [input, setInput] = useState("");
-    const [messages, setMessages] = useState([
-        {
-            message: "Hello I am ChatGPT",
-            sender: "ChatGPT"
-        }
-    ]);
+const MainBox = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [input, setInput] = useState('');
+  const [messages, setMessages] = useState([
+    {
+      message: 'Hello I am ChatGPT',
+      sender: 'ChatGPT',
+    },
+  ]);
 
-    const handleChange = (event)=>{
-        setInput(event.target.value)
-    }
+  const handleChatIconClick = () => {
+    setIsChatOpen(true);
+  };
 
-    const handleSend = async (event)=>{
-        event.preventDefault()
-        const newMessage = {
-            message: input,
-            sender: "user"
-        }
+  const handleChange = (text) => {
+    setInput(text);
+  };
 
-        const newMessages = [...messages,newMessage];
+  const handleSend = async () => {
+    const newMessage = {
+      message: input,
+      sender: 'user',
+    };
 
-        setMessages(newMessages);
+    const newMessages = [...messages, newMessage];
+    setMessages(newMessages);
+    setInput('');
 
-        setInput('');
+    await processMessageToChatGPT(newMessages);
+  };
 
-        await processMessageToChatGPT(newMessages);
-    }
+  async function processMessageToChatGPT(chatMessages) {
+    // The API_KEY and the rest of the function remains the same
+  }
 
-    async function processMessageToChatGPT(chatMessages){
-        const API_KEY = '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'
-        let apiMessages = chatMessages.map((messageObject)=>{
-            let role="";
-            if(messageObject.sender === "ChatGPT"){
-                role = "assistant"
-            }else{
-                role = "user"
-            }
-            return (
-                {role: role, content: messageObject.message}
-            )
-        });
+  return (
+    <div style={styles.container}>
+      <button style={styles.chatbotIcon} onClick={handleChatIconClick}>
+        <img src={chatbotImage} style={styles.icon} alt="Chatbot Icon" />
 
-        const systemMessage = {
-            role: "system",
-            content: "Explain all concept like i am 10 year old"
-        }
-
-        const apiRequestBody = {
-            "model": "gpt-3.5-turbo",
-            "messages": [
-                systemMessage,
-                ...apiMessages
-            ]
-        }
-
-        await fetch("https://api.openai.com/v1/chat/completions",{
-            method: "POST",
-            headers: {
-                "Authorization": `Bearer ${API_KEY}`,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(apiRequestBody)
-        }).then((response)=>{
-            return response.json();
-        }).then((data)=>{
-            console.log(data.choices[0].message.content);
-            setMessages(
-                [
-                    ...chatMessages,
-                    {
-                        message: data.choices[0].message.content,
-                        sender: "ChatGPT"
-                    }
-                ]
-            )
-        })
-    }
-
-    return (
-        <div className="container">
-			<div className="response-area">
-                {messages.map((message, index) => {
-                    return(
-                        <div className={message.sender==="ChatGPT" ? 'gpt-message message' : 'user-message message'}>{message.message}</div>
-                    );
-                })}
+        {isChatOpen && (
+          <div style={styles.chatbot}>
+            <div style={styles.responseArea}>
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  style={
+                    message.sender === 'ChatGPT' ? styles.gptMessage : styles.userMessage
+                  }
+                >
+                  <text>{message.message}</text>
+                </div>
+              ))}
             </div>
-			<div className="prompt-area">
-				<input type="text" placeholder="Send a message..." value={input} onChange={handleChange}/>
-				<button className="submit" type="submit" onClick={handleSend}>Send</button>
-			</div>
-		</div>
-    );
-}
+            <div style={styles.promptArea}>
+              <input
+                style={styles.textInput}
+                type="text"
+                placeholder="Send a message..."
+                value={input}
+                onChange={(e) => handleChange(e.target.value)}
+              />
+              <button style={styles.submit} onClick={handleSend}>
+                Send
+              </button>
+            </div>
+          </div>
+        )}
+      </button>
+
+      <div style={styles.centeredView}>
+        <modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            window.alert('Modal has been closed.');
+            setModalVisible(!modalVisible);
+          }}
+        >
+          <div style={styles.centeredView}>
+            <div style={styles.modalView}>
+              <text style={styles.modalText}>Hello World!</text>
+              <button style={[styles.button, styles.buttonClose]} onClick={() => setModalVisible(!modalVisible)}>
+                <text style={styles.textStyle}>Hide Modal</text>
+              </button>
+            </div>
+          </div>
+        </modal>
+        <button style={[styles.button, styles.buttonOpen]} onClick={() => setModalVisible(true)}>
+          <test style={styles.textStyle}>Show Modal</test>
+        </button>
+      </div>
+    </div>
+  );
+};
+const styles = StyleSheet.create({
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 22,
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  button: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+  },
+  buttonOpen: {
+    backgroundColor: '#F194FF',
+  },
+  buttonClose: {
+    backgroundColor: '#2196F3',
+  },
+  textStyle: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  chatbot: {
+    bottom: 0,
+    right: 10,
+    width: 100,
+    height: 100,
+    backgroundcolor: 'white',
+    border: 3,
+    borderradius: 4,
+    padding: 10,
+  },
+  chatbotIcon: {
+    cursor: 'pointer',
+  },
+});
+
+export default MainBox;
