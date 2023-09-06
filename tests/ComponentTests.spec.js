@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { render } from 'preact';
+// import { render } from 'preact';
 import Navbar from '../src/components/Navbar/Navbar';
 
 test('Component Navbar', async ({ page }) => {
@@ -12,3 +12,17 @@ test('Component Navbar', async ({ page }) => {
   await expect(page.locator('.Navbar')).toBeVisible();
 });
 
+test('does not show prototypes for object and array inline', () => {
+  const object = {
+    array: [{hello: 'Danger'}],
+  };
+  expect(object).toMatchInlineSnapshot(`
+{
+  "array": [
+    {
+      "hello": "Danger",
+    },
+  ],
+}
+    `);
+});
