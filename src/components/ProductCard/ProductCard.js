@@ -4,7 +4,7 @@ import React from "react";
 import "./ProductCard";
 
 export default function ProductCard(props) {
-  //const clr = "#2196f3";
+  const clr = "#2196f3";
   const { productDetails, colorCode } = props;
   const somstyle = {
     "--company": productDetails.ProductCompany,

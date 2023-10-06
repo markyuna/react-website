@@ -8,7 +8,6 @@
     "@babel/plugin-transform-class-properties": "^7.22.5",
     "@babel/plugin-transform-nullish-coalescing-operator": "^7.22.11",
     "@babel/plugin-transform-optional-catch-binding": "^7.22.11",
-    "@babel/plugin-transform-private-property-in-object": "^7.22.11",
     "@babel/preset-react": "^7.22.15",
     "@craco/craco": "^7.1.0",
     "@rollup/plugin-terser": "^0.4.3",
@@ -89,7 +88,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-private-property-in-object": "^7.22.11",
     "@cucumber/cucumber": "^9.5.1",
     "@jridgewell/sourcemap-codec": "^1.4.15",
     "@playwright/experimental-ct-react": "^1.37.1",
