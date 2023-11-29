@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+// import { useEffect } from 'react';
 import GlobalStyle from './globalStyles';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -14,6 +15,30 @@ import Etape from './pages/EtapesPage';
 
 
 function App() {
+
+  function handleCallbackResponse(response) {
+    console.log("Encoded JWT ID token: " + response.credential);
+  }
+
+  useEffect(() => {
+    /* global google */
+    google.accounts.id.initialize({
+      client_id: "221914569901-hi7uskqlff1iv8ef1p16tfj7gimau83d.apps.googleusercontent.com",
+      callback: handleCallbackResponse,
+      auto_select: true,
+      ux_mode: "popup"
+    });
+
+    google.accounts.id.renderButton(
+      document.getElementById("signInDiv"),
+      {
+        theme: "outline",
+        size: "large",
+        text: "continue_with" 
+      }
+    );
+  }, []);
+
   return (
     <BrowserRouter>
       <GlobalStyle />

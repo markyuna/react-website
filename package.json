@@ -24,6 +24,7 @@
     "cypress": "^13.1.0",
     "expo-secure-store": "~12.3.1",
     "framer-motion": "^10.16.4",
+    "googleapis": "^126.0.1",
     "html-webpack-plugin": "^5.5.3",
     "install": "^0.13.0",
     "preact": "^10.17.1",
