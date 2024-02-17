@@ -3,7 +3,7 @@ export const data = [
 		title: 'What our clients say',
 		description:
 			'Our clients happily stay with our services for more several years now. See real reviews from our clients.',
-		image: './assets/lanterne.png',
+		image: './assets/lam_chevet.jpeg',
 	},
 	{
 		title: 'Our security ',
