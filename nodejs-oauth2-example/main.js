@@ -40,9 +40,9 @@ const authorizationUrl = oauth2Client.generateAuthUrl({
 let userCredential = null;
 
 async function main() {
-  const server = http.createServer(async function (req, res) {
+  http.createServer(async function (req, res) {
     // Example on redirecting user to Google's OAuth 2.0 server.
-    if (req.url == '/') {
+    if (req.url === '/') {
       res.writeHead(301, { "Location": authorizationUrl });
     }
 

@@ -32,15 +32,15 @@ function Pricing() {
 						Create, maintain and store your data with Delta.
 					</TextWrapper>
 					<PricingContainer>
-						{pricingData.map((card, index) => (
+						{pricingData.map(({ title, price, description, features }, index) => (
 							<PricingCard key={index}>
 								<PricingCardInfo>
-									<PricingCardPlan>{card.title}</PricingCardPlan>
-									<PricingCardCost>{card.price}</PricingCardCost>
-									<PricingCardText>{card.description}</PricingCardText>
+									<PricingCardPlan>{title}</PricingCardPlan>
+									<PricingCardCost>{price}</PricingCardCost>
+									<PricingCardText>{description}</PricingCardText>
 									<PricingCardFeatures>
-										{card.features.map((feature, index) => (
-											<PricingCardFeature key={index}>
+										{features.map((feature, featureIndex) => (
+											<PricingCardFeature key={featureIndex}>
 												{feature}
 											</PricingCardFeature>
 										))}

@@ -18,7 +18,7 @@ const Product = () => {
       productName: "Lanterne Plafonnier",
       ProductCompany: "MarkPaper",
       productPhoto: "lanterne2.png", // 1:1.38 aspect ratio
-      productPrice: "249",
+      productPrice: "149",
       productColor: "ash",
     },
     {

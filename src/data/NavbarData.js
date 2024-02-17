@@ -11,4 +11,8 @@ export const data = [
     to: '/pricing',
     text: 'Sculptures',
   },
+  {
+    to: '/pricing',
+    text: 'Contact',
+  },
 ];

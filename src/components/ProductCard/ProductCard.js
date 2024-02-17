@@ -4,13 +4,13 @@ import React from "react";
 import "./ProductCard";
 
 export default function ProductCard(props) {
-  const clr = "#2196f3";
+  // const clr = "#2196f3";
   const { productDetails, colorCode } = props;
   const somstyle = {
     "--company": productDetails.ProductCompany,
     "--clr": colorCode,
   };
-  var productPrice = productDetails.productPrice.split(".");
+  const productPrice = productDetails.productPrice.split(".");
 
   return (
     <div className="productCard" style={somstyle}>

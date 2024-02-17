@@ -60,7 +60,7 @@ export default function Navbar() {
               </NavItem>
             ) : (
               <NavItem>
-                <LoginButton />
+                {/* <LoginButton /> */}
               </NavItem>
             )}
           </NavMenu>
